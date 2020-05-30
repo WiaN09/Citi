@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation2]">
+  <test name="Trial2(failed)">
+    <classes>
+      <class name="skeleton.OracleTest">
+        <methods>
+          <include name="End"/>
+          <include name="Test"/>
+          <include name="startup"/>
+        </methods>
+      </class> <!-- skeleton.OracleTest -->
+    </classes>
+  </test> <!-- Trial2(failed) -->
+</suite> <!-- Failed suite [Automation2] -->

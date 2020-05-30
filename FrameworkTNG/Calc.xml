@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name = "Automation1">
+	<test name = "Trial1">
+	<classes>
+	<class name = "skeleton.CalcTest"/> 
+	</classes>
+	</test>
+</suite>

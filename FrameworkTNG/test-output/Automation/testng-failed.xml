@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Automation]">
+  <test thread-count="5" name="Trial(failed)">
+    <classes>
+      <class name="skeleton.CalcTest">
+        <methods>
+          <include name="End"/>
+          <include name="Sum"/>
+          <include name="capabilities"/>
+          <include name="Initiliase"/>
+        </methods>
+      </class> <!-- skeleton.CalcTest -->
+    </classes>
+  </test> <!-- Trial(failed) -->
+</suite> <!-- Failed suite [Automation] -->

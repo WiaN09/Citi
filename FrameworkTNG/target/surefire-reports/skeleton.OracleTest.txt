@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: skeleton.OracleTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 36.55 s <<< FAILURE! - in skeleton.OracleTest
+Test(skeleton.OracleTest)  Time elapsed: 17.26 s  <<< FAILURE!
+io.appium.java_client.NoSuchContextException: 
+An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '44.0.2403'. You could also try to enable automated chromedrivers download server feature. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIAN09', ip: '192.168.43.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\shiwa\Documents\Ap..., appPackage: com.spellthem.webpages, autoAcceptAlerts: true, autoGrantPermissions: true, avd: Trial, databaseEnabled: false, desired: {app: C:\Users\shiwa\Documents\Ap..., autoAcceptAlerts: true, autoGrantPermissions: true, avd: Trial, deviceName: Trial, noReset: true, platformName: android}, deviceApiLevel: 23, deviceManufacturer: unknown, deviceModel: Android SDK built for x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 6.0, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 9ca810d6-e656-4d68-a8b5-d64eb6d1bc66
+	at skeleton.OracleTest.Test(OracleTest.java:21)
+Caused by: org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '44.0.2403'. You could also try to enable automated chromedrivers download server feature. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIAN09', ip: '192.168.43.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\shiwa\Documents\Ap..., appPackage: com.spellthem.webpages, autoAcceptAlerts: true, autoGrantPermissions: true, avd: Trial, databaseEnabled: false, desired: {app: C:\Users\shiwa\Documents\Ap..., autoAcceptAlerts: true, autoGrantPermissions: true, avd: Trial, deviceName: Trial, noReset: true, platformName: android}, deviceApiLevel: 23, deviceManufacturer: unknown, deviceModel: Android SDK built for x86_64, deviceName: emulator-5554, deviceScreenDensity: 420, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 6.0, statBarHeight: 63, takesScreenshot: true, viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 9ca810d6-e656-4d68-a8b5-d64eb6d1bc66
+	at skeleton.OracleTest.Test(OracleTest.java:21)
+
+End(skeleton.OracleTest)  Time elapsed: 20.297 s  <<< FAILURE!
+java.lang.NullPointerException
+

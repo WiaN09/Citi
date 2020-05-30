@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name = "Automation2">
+	<test name = "Trial2">
+	<classes>
+	<class name = "skeleton.Oracle"/> 
+	</classes>
+	</test>
+</suite>
