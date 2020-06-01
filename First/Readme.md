@@ -9,3 +9,4 @@ Features
 5. Cucumber is used to develop the framework.
 6. Page Object Model implemented
 7. Basic gestures used are clicking, entering text, native view, handling alerts.
+8. Logger has been implemented.
