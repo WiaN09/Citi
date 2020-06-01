@@ -1,0 +1,20 @@
+[
+  {
+    "users":
+    {
+      "country": "Greater Nazi Reich",
+      "address": "Manhattan",
+      "email": "reichsmarshall@gnr.com",
+      "phone": "0123456789",
+    }
+  },
+  {
+    "users":
+    {
+      "country": "Pacific States",
+      "address": "San Francisco",
+      "email": "takeshikido@pcs.com",
+      "phone": "9876543210",
+    }
+  }
+]

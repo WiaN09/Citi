@@ -44,7 +44,7 @@ public class oracle {
 		  
 	}	    	
 	    	
-	@Given("^I'm at the homescreen'$")
+	@Given("^I'm at the homescreen$")
 	public void i_m_at_the_homescreen(){
 		System.out.println("I'm at the homescreen");
 	}

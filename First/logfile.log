@@ -1,0 +1,14 @@
+2020-06-01 15:57:20,834 INFO  [Log] I'm at the home screen 
+2020-06-01 15:57:22,344 INFO  [Log] App opened 
+2020-06-01 15:57:24,590 INFO  [Log] Login details entered[Ljava.lang.String;@2d72f75e 
+2020-06-01 15:57:25,229 INFO  [Log] Login button clicked 
+2020-06-01 15:57:29,558 INFO  [Log] Profile details filled[Ljava.lang.String;@213e3629 
+2020-06-01 15:57:30,179 INFO  [Log] Profile details saved 
+2020-06-01 15:57:31,114 INFO  [Log] Logged out 
+2020-06-01 16:16:47,933 INFO  [Log] I'm at the home screen 
+2020-06-01 16:16:49,287 INFO  [Log] App opened 
+2020-06-01 16:16:51,676 INFO  [Log] Login details entered 
+2020-06-01 16:16:52,342 INFO  [Log] Login button clicked 
+2020-06-01 16:16:58,741 INFO  [Log] Profile details filled 
+2020-06-01 16:16:59,332 INFO  [Log] Profile details saved 
+2020-06-01 16:17:00,296 INFO  [Log] Logged out 
