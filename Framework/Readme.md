@@ -1,4 +1,4 @@
-This is the skeletal framework required for the first deadline
+This is a cucumber based skeletal framework 
 
 Features
 1.	Utilises a hybrid app and navigates through it.
