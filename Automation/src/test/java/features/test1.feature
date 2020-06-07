@@ -10,11 +10,18 @@ Feature: This feature allows the user to shop from the app
   	|Gender|Female|  
     And User clicks on "ShopButton"
     Then User navigates to the "Products" page
-
-   Scenario: User adds products to the cart
-    Given User is on products page
-    When User adds products to the cart
-    |Products|jordan_9|
+    And User adds products to the cart
+    |Products|jordan_1|all_star|jordan_9| 
     And User clicks on "CartButton"
-    Then User navigates to the "Cart" page
+    And User navigates to the "Cart" page
+    
+    Scenario: Final shopping page
+    Given User is on the Cart Page
+    And User clicks on "Checkbox"
+    When User clicks on "Visit_to_the_website"
+    Then User is taken to Google Homepage
+    And User enters the detail
+    |Search|http://the-internet.herokuapp.com/ \n|
+    And User clicks on "The_Internet"
+    
 
