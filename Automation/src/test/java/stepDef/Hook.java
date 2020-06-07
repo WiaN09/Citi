@@ -1,8 +1,11 @@
 package stepDef;
 
+import base.Log;
 import base.Utilities;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,17 +25,23 @@ public class Hook extends Utilities{
         this.utl = utl;
     }
 	AppiumDriverLocalService appiumService;
-	
+	String appiumUrl;
 		@Before
 		public void startup() throws MalformedURLException
 		{
-		    
-			String appiumUrl;
+			BasicConfigurator.configure();
+		    Log.startLog();
+		    Log.info("Starting server");
+		    try {
 	    	appiumService = AppiumDriverLocalService.buildDefaultService();
 	    	appiumService.start();
+	    	}
+		    catch(Exception e)
+		    {
+		    	Log.error("Appium server", e);
+		    }
 	    	appiumUrl = appiumService.getUrl().toString();
-	    	System.out.println("Appium server is open");
-	    	System.out.println("Opening the app");
+	    	Log.info("Opening the app");
 	    	DesiredCapabilities capabilities = new DesiredCapabilities();
 		    capabilities.setCapability("deviceName","Demo");
 		    capabilities.setCapability("avd","Demo"); 
@@ -49,15 +58,15 @@ public class Hook extends Utilities{
 	        // Initialize driver
 			utl.driver = new AndroidDriver<AndroidElement>(new URL(appiumUrl), capabilities);
 			utl.wait = new WebDriverWait(utl.driver, 15);
-			System.out.println("App Opened");
 		}
 	
 		@After
     	public void End() throws InterruptedException {
+				   Log.endLog();
     			   Thread.sleep(5000L);
-                   System.out.println("Stop driver");
+                   Log.info("Stop driver");
                    utl.driver.quit();
-                   System.out.println("Stop appium service");
+                   Log.info("Stop appium service");
                    appiumService.stop();
     }
 }

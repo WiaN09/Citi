@@ -24,18 +24,21 @@ public class Utilities {
     public WebDriverWait wait;
     
     public boolean scrollToFind(String country) {
+		Log.debug("Scroll to find");
     	try {
     		//scrolls and finds
     		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +country +"\"))").click();
     	}
     	catch (Exception e){
-    		e.printStackTrace();
+    		Log.error("ScrollToFind",e);
+    		//Log.error(e.getMessage());
     		return false;
     	}
     	return true;
     }
     
     public boolean enterText(String box, String text) {
+		Log.debug("Entering Text");
     	try {
     		//Find path of element to be clicked
     		String path = reader.path(box);
@@ -45,26 +48,28 @@ public class Utilities {
     		driver.pressKey(new KeyEvent(AndroidKey.ESCAPE));
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+    		Log.error("Entering Text", e);
     		return false;
     	}
     	return true;
     }
     
     public boolean click(String object) {
+		Log.debug("Clicking an element");
     	try {
     		//Find path of element to be clicked
     		String path = reader.path(object);
     		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path))).click();    
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+    		Log.error("Clicking", e);
     		return false;
     	}
     	return true;
     }
     
     public boolean scroll() {
+    	Log.debug("Scrolling");
     	try {
     		//general scrolling
     		Dimension size = this.driver.manage().window().getSize();
@@ -75,13 +80,14 @@ public class Utilities {
     		action.longPress(PointOption.point(startX, startY)).moveTo(PointOption.point(startX, endY)).release().perform();
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+    		Log.error("Scrolling",e);
     		return false;
     	}
     	return true;
     }
     
     public boolean check(String object) {
+    	Log.debug("Checking presence");
     	try {
     		//Check whether element is present or not
     		String path = reader.path(object);
@@ -89,13 +95,14 @@ public class Utilities {
     		//driver.findElementByXPath(path);  
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+    		Log.error("Checking", e);
     		return false;
     	}
     	return true;
     }
     
     public boolean products(List<List<String>> data) {
+    	Log.debug("Adding products to cart");
     	try {
     		int temp=0;
     		for(int i=1;i<data.get(0).size();i++)
@@ -112,23 +119,28 @@ public class Utilities {
     		}
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+    		Log.error("Adding products to cart", e);
     		return false;
     	}
     	return true;
     	}
     
     public boolean switchToWebContext() throws InterruptedException {
+    	Log.debug("Switching context");
+    	try {
     	Thread.sleep(5000);
-    	//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
         Set<String> contexts = driver.getContextHandles();
         for (String context : contexts) {
             if (context.contains("WEBVIEW")) {
                 driver.context(context);
-                return true;
             }
-        }
-        return false;
+        	}
+    	}
+    	catch(Exception e) {
+    		Log.error("Switching context", e);
+    		return false;
+    	}
+    	return true;
     }
 
     }

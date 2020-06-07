@@ -7,6 +7,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import java.util.List;
 import org.junit.Assert;
+
+import base.Log;
 import base.Utilities;
 
 public class LogIn extends Utilities{
@@ -18,7 +20,7 @@ public class LogIn extends Utilities{
     
     @Given("^App is open$")
     public void app_is_open() {
-        System.out.println("App is open");
+        Log.info("App is open");
     }
 
     @When("^User selects the value from dropdown$")
@@ -48,6 +50,5 @@ public class LogIn extends Utilities{
     @Then("^User navigates to the \"([^\\\"]*)\" page$")
     public void user_navigates_to_the_something_page(String arg1) {
     	Assert.assertTrue(utl.check(arg1));
-    	//System.out.println("True for now");
     }
 }

@@ -1,0 +1,15 @@
+2020-06-07 15:19:17 INFO  Log:12 - Test is Starting...
+2020-06-07 15:19:18 INFO  Log:22 - Opening the app
+2020-06-07 15:19:32 INFO  Log:22 - App is open
+2020-06-07 15:20:03 INFO  Log:22 - Cart page is open
+2020-06-07 15:20:29 INFO  Log:17 - Test is Ending...
+2020-06-07 15:20:34 INFO  Log:22 - Stop driver
+2020-06-07 15:20:35 INFO  Log:22 - Stop appium service
+2020-06-07 15:29:16 INFO  Log:14 - Test is Starting...
+2020-06-07 15:29:16 INFO  Log:26 - Starting server
+2020-06-07 15:29:18 INFO  Log:26 - Opening the app
+2020-06-07 15:29:33 INFO  Log:26 - App is open
+2020-06-07 15:30:05 INFO  Log:26 - Cart page is open
+2020-06-07 15:30:32 INFO  Log:20 - Test is Ending...
+2020-06-07 15:30:37 INFO  Log:26 - Stop driver
+2020-06-07 15:30:38 INFO  Log:26 - Stop appium service
