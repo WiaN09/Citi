@@ -10,6 +10,6 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/java/features", 
 		glue = "stepDef"
 		)
-public class LogRun {
+public class LogRunTest {
 
 }
