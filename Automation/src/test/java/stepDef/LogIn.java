@@ -50,5 +50,6 @@ public class LogIn extends Utilities{
     @Then("^User navigates to the \"([^\\\"]*)\" page$")
     public void user_navigates_to_the_something_page(String arg1) {
     	Assert.assertTrue(utl.check(arg1));
+    	Log.info("User is on "+arg1+" page");
     }
 }

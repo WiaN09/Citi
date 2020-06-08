@@ -23,15 +23,14 @@ public class Utilities {
     public Reader reader = new Reader();
     public WebDriverWait wait;
     
-    public boolean scrollToFind(String country) {
+    public boolean scrollToFind(String object) {
 		Log.debug("Scroll to find");
     	try {
     		//scrolls and finds
-    		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +country +"\"))").click();
+    		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" +object +"\"))").click();
     	}
     	catch (Exception e){
-    		Log.error("ScrollToFind",e);
-    		//Log.error(e.getMessage());
+    		Log.error("ScrollToFind "+object,e);
     		return false;
     	}
     	return true;
@@ -48,7 +47,7 @@ public class Utilities {
     		driver.pressKey(new KeyEvent(AndroidKey.ESCAPE));
     	}
     	catch(Exception e) {
-    		Log.error("Entering Text", e);
+    		Log.error("Entering Text "+box, e);
     		return false;
     	}
     	return true;
@@ -62,7 +61,7 @@ public class Utilities {
     		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path))).click();    
     	}
     	catch(Exception e) {
-    		Log.error("Clicking", e);
+    		Log.error("Clicking "+object, e);
     		return false;
     	}
     	return true;
@@ -95,7 +94,7 @@ public class Utilities {
     		//driver.findElementByXPath(path);  
     	}
     	catch(Exception e) {
-    		Log.error("Checking", e);
+    		Log.error("Checking "+object, e);
     		return false;
     	}
     	return true;
@@ -128,13 +127,15 @@ public class Utilities {
     public boolean switchToWebContext() throws InterruptedException {
     	Log.debug("Switching context");
     	try {
-    	Thread.sleep(5000);
-        Set<String> contexts = driver.getContextHandles();
-        for (String context : contexts) {
-            if (context.contains("WEBVIEW")) {
-                driver.context(context);
+    		Thread.sleep(3000);
+    		Set<String> contexts = driver.getContextHandles();
+            for (String context : contexts) {
+            	if(context.contains("WEBVIEW"))
+            	{
+            		 driver.context(context);
+            		 Log.info(driver.getContext());
+            	}
             }
-        	}
     	}
     	catch(Exception e) {
     		Log.error("Switching context", e);

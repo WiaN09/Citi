@@ -27,7 +27,6 @@ public class Web {
     
     @Given("^User is on the Cart Page$")
     public void user_is_on_the_cart_page()  {
-        Log.info("Cart page is open");
     }
 
     @Then("^User is taken to Google Homepage$")

@@ -1,12 +1,17 @@
 package base;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class Log {
 	
     //Initialize Log4j instance
     private static Logger Log = Logger.getLogger(Log.class.getName());
- 
+    
+    public void main(String[] args) {
+    	BasicConfigurator.configure();
+    }
+    
     //We can use it when starting tests
     public static void startLog (){
         Log.info("Test is Starting...");
@@ -29,7 +34,7 @@ public class Log {
  
     //Error Level Logs
     public static void error (String message, Exception e) {
-        Log.error(message);
+        Log.error(message, e);
     }
  
     //Fatal Level Logs

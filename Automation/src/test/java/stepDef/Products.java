@@ -16,11 +16,6 @@ public class Products extends Utilities{
         this.utl = utl;
     }
     
-    @Given("^User is on products page$")
-    public void user_is_on_products_page()  {
-        Log.info("Products page is open");
-    }
-    
     @Then("^User adds products to the cart$")
     public void user_adds_products_to_the_cart(DataTable arg1)  {
     	List<List<String>> data = arg1.asLists(String.class);

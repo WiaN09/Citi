@@ -5,7 +5,6 @@ import base.Utilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,7 +28,6 @@ public class Hook extends Utilities{
 		@Before
 		public void startup() throws MalformedURLException
 		{
-			BasicConfigurator.configure();
 		    Log.startLog();
 		    Log.info("Starting server");
 		    try {
@@ -58,6 +56,7 @@ public class Hook extends Utilities{
 	        // Initialize driver
 			utl.driver = new AndroidDriver<AndroidElement>(new URL(appiumUrl), capabilities);
 			utl.wait = new WebDriverWait(utl.driver, 15);
+			Log.info("Opening the app");
 		}
 	
 		@After
@@ -65,7 +64,7 @@ public class Hook extends Utilities{
 				   Log.endLog();
     			   Thread.sleep(5000L);
                    Log.info("Stop driver");
-                   utl.driver.quit();
+                   utl.driver.quit(); //Change to close when maven project
                    Log.info("Stop appium service");
                    appiumService.stop();
     }
