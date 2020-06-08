@@ -53,6 +53,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
+      <scope>test</scope>
     </dependency>
     
 	<dependency>
@@ -79,6 +80,33 @@
      <version>1.2.5</version>
      <scope>test</scope>
 	</dependency>
+	
+	<dependency>
+     <groupId>org.apache.maven.surefire</groupId>
+     <artifactId>surefire-junit47</artifactId>
+     <version>3.0.0-M4</version>
+    </dependency>
+<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>3.6.0</version>
+</dependency>
+<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-html</artifactId>
+			<version>0.2.3</version>
+</dependency>
+<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.0.5</version>
+</dependency>
+<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>2.0.4</version>
+</dependency>
+
 
   </dependencies>
 
@@ -98,10 +126,6 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -124,6 +148,10 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+  		</plugin>
       </plugins>
     </pluginManagement>
   </build>
