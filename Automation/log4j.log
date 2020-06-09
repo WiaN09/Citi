@@ -1808,3 +1808,123 @@ Session ID: 0ca18d10-ad41-49f2-816b-327a9493241e
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
 2020-06-08 14:48:15 INFO  Log:22 - Test is Ending...
 2020-06-08 14:48:20 INFO  Log:27 - Stop driver
+2020-06-08 16:26:11 INFO  Log:17 - Test is Starting...
+2020-06-08 16:26:11 INFO  Log:27 - Starting server
+2020-06-08 16:26:13 ERROR Log:37 - Appium server
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'D:\doc's\New folder\Citi-master\Automation\appium\build\lib\main.js'
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at stepDef.Hook.startup(Hook.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.runtime.Runtime.run(Runtime.java:122)
+	at cucumber.api.cli.Main.run(Main.java:36)
+	at cucumber.api.cli.Main.main(Main.java:18)
+2020-06-08 16:26:13 INFO  Log:22 - Test is Ending...
+2020-06-08 16:26:18 INFO  Log:27 - Stop driver
+2020-06-08 16:26:18 INFO  Log:17 - Test is Starting...
+2020-06-08 16:26:18 INFO  Log:27 - Starting server
+2020-06-08 16:26:18 ERROR Log:37 - Appium server
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'D:\doc's\New folder\Citi-master\Automation\appium\build\lib\main.js'
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at stepDef.Hook.startup(Hook.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.runtime.Runtime.run(Runtime.java:122)
+	at cucumber.api.cli.Main.run(Main.java:36)
+	at cucumber.api.cli.Main.main(Main.java:18)
+2020-06-08 16:26:18 INFO  Log:22 - Test is Ending...
+2020-06-08 16:26:23 INFO  Log:27 - Stop driver
+2020-06-08 16:32:04 INFO  Log:17 - Test is Starting...
+2020-06-08 16:32:04 INFO  Log:27 - Starting server
+2020-06-08 16:32:05 ERROR Log:37 - Appium server
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'D:\doc's\New folder\Citi-master\Automation\appium\build\lib\main.js'
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at stepDef.Hook.startup(Hook.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.runtime.Runtime.run(Runtime.java:122)
+	at cucumber.api.cli.Main.run(Main.java:36)
+	at cucumber.api.cli.Main.main(Main.java:18)
+2020-06-08 16:32:05 INFO  Log:22 - Test is Ending...
+2020-06-08 16:32:10 INFO  Log:27 - Stop driver
+2020-06-08 16:32:10 INFO  Log:17 - Test is Starting...
+2020-06-08 16:32:10 INFO  Log:27 - Starting server
+2020-06-08 16:32:10 ERROR Log:37 - Appium server
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'D:\doc's\New folder\Citi-master\Automation\appium\build\lib\main.js'
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:161)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:300)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:381)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:87)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:83)
+	at stepDef.Hook.startup(Hook.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.runtime.Runtime.run(Runtime.java:122)
+	at cucumber.api.cli.Main.run(Main.java:36)
+	at cucumber.api.cli.Main.main(Main.java:18)
+2020-06-08 16:32:10 INFO  Log:22 - Test is Ending...
+2020-06-08 16:32:15 INFO  Log:27 - Stop driver
