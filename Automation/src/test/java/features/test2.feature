@@ -21,5 +21,5 @@ Feature: This feature allows the user to shop from the app
     	And User clicks on "The_Internet"
     	Examples:
     	| Country    | Nameofperson    | Gender | Products    | url                                             |
-    	| Australia  | Jennifer        | Female | jordan_1    | Search|http://the-internet.herokuapp.com/ \n    |
-	| India      | alex            | Male   | jordan_9    | Search|http://the-internet.herokuapp.com/ \n    |
+    	| Australia  | Jennifer        | Female | jordan_1    | http://the-internet.herokuapp.com/ \n    |
+		| India      | alex            | Male   | jordan_9    | http://the-internet.herokuapp.com/ \n    |
