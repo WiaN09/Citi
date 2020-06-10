@@ -62,7 +62,7 @@ public class Hook extends Utilities{
 		@After
     	public void End() throws InterruptedException {
 				   Log.endLog();
-    			   Thread.sleep(5000L);
+    			   Thread.sleep(2500L);
                    Log.info("Stop driver");
                    utl.driver.quit(); //Change to close when maven project
                    Log.info("Stop appium service");

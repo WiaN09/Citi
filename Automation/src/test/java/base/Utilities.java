@@ -1,10 +1,14 @@
 package base;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,6 +18,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class Utilities {
@@ -100,6 +105,21 @@ public class Utilities {
     	return true;
     }
     
+	public boolean dragndrop(String from, String to) {
+		Log.debug("Performing drag n drop");
+		try {
+			TouchAction action=new TouchAction(this.driver);
+			WebElement first = driver.findElement(By.xpath(reader.path(from)));
+			WebElement second = driver.findElement(By.xpath(reader.path(to)));
+			action.longPress(ElementOption.element(first)).moveTo(ElementOption.element(second)).release().perform();
+		}
+		catch(Exception e) {
+			Log.error("Dragging & Dropping", e);
+			return false;
+		}
+		return true;
+	}
+    
     public boolean products(List<List<String>> data) {
     	Log.debug("Adding products to cart");
     	try {
@@ -142,6 +162,14 @@ public class Utilities {
     		return false;
     	}
     	return true;
+    }
+    public void moveSliderToNumber(String object, String num) throws IOException{
+    	int n = Integer.parseInt(num);
+    	String xpath=reader.path(object);
+    	WebElement slider=driver.findElementByXPath(xpath);
+    	Actions move = new Actions(driver);
+    	Action action = move.dragAndDropBy(slider, n, 0).build();
+    	action.perform();    	
     }
 
     }

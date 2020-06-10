@@ -24,23 +24,18 @@ public class LogIn extends Utilities{
     }
 
     @When("^User selects the value from \"([^\"]*)\" with \"([^\"]*)\"$")
-    public void user_selects_the_value_from_with(String arg1, String arg2) throws Throwable {
+    public void user_selects_the_value_from_with(String arg1, String arg2) {
     	utl.click(arg1);
     	utl.scrollToFind(arg2);
     }
    
     @And("^User enters the \"([^\"]*)\" with \"([^\"]*)\"$")
-    public void user_enters_the_with(String arg1, String arg2) throws Throwable {
+    public void user_enters_the_with(String arg1, String arg2) {
     	utl.enterText(arg1, arg2);
     }
     
-    @And("^User selects a value$")
-    public void user_selects_a_value(DataTable arg1) {
-    	List<List<String>> data = arg1.asLists(String.class);
-    	
-    }
     @And("^User selects a \"([^\"]*)\"$")
-    public void user_selects_a(String arg1) throws Throwable {
+    public void user_selects_a(String arg1) {
     	utl.click((arg1));
     }
     
@@ -48,10 +43,24 @@ public class LogIn extends Utilities{
     public void user_clicks_on(String arg1) {
         utl.click(arg1);
     }
-
-    @Then("^User navigates to the \"([^\\\"]*)\" page$")
-    public void user_navigates_to_the_something_page(String arg1) {
-    	Assert.assertTrue(utl.check(arg1));
-    	Log.info("User is on "+arg1+" page");
+    
+    @And("^User selects a value$")
+    public void user_selects_a_value(DataTable arg1) {
+    	List<List<String>> data = arg1.asLists(String.class);
+    	utl.click(data.get(0).get(1));
     }
+    
+    @When("^User selects the value from dropdown$")
+    public void user_selects_the_value_from_dropdown(DataTable arg1) throws Throwable {
+    	List<List<String>> data = arg1.asLists(String.class);
+    	utl.click("dropdown");
+    	utl.scrollToFind(data.get(0).get(1));
+    }
+
+    @And("^User enters the detail$")
+    public void user_enters_the_detail(DataTable arg1) {
+    	List<List<String>> data = arg1.asLists(String.class);
+    	utl.enterText(data.get(0).get(0), data.get(0).get(1));
+    }
+
 }
