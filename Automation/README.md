@@ -12,5 +12,5 @@ Features
 8. Data Driven with Data Tables, Excel and Regular Expressions. 
 9. Multiple feature files with multiple scenarios
 10. Gestures like clicking, scrolling, entering text, checkboxes, switching context, slider, alert boxes, drag n drop have been implemented.
-11. Reporting has been implemented through webpages.
+11. Reporting has been implemented through webpages with the help of pretty plugin.
 
