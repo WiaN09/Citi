@@ -64,7 +64,7 @@ public class Hook extends Utilities{
 				   Log.endLog();
     			   Thread.sleep(2500L);
                    Log.info("Stop driver");
-                   utl.driver.close(); //Change to close when maven project
+                   utl.driver.quit(); //Change to close when maven project
                    Log.info("Stop appium service");
                    appiumService.stop();
     }

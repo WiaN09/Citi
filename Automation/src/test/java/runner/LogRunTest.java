@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/features/Gesture.feature", 
+		features = "src/test/java/features/Excel.feature", 
 		glue = "stepDef",
 		monochrome = true,
 		tags = {},

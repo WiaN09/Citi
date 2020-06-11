@@ -50,9 +50,14 @@ public class Utilities {
     		//Find path of element to be clicked
     		String path = reader.path(box);
     		//wait and then enter
-    		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path))).sendKeys(text);    
-    		//remove the keyboard
-    		driver.pressKey(new KeyEvent(AndroidKey.ESCAPE));
+    		if(box.equals("Search"))
+    			{
+    				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path))).sendKeys(text+"\n");    
+    			}
+    		else {
+    			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path))).sendKeys(text);    
+    			driver.pressKey(new KeyEvent(AndroidKey.ESCAPE));
+    		}		
     	}
     	catch(Exception e) {
     		Log.error("Entering Text "+box, e);
