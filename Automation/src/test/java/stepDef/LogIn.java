@@ -29,8 +29,8 @@ public class LogIn extends Utilities{
     	utl.scrollToFind(arg2);
     }
    
-    @And("^User enters the \"([^\"]*)\" with \"([^\"]*)\"$")
-    public void user_enters_the_with(String arg1, String arg2) {
+    @And("^User enters in the \"([^\"]*)\" box with \"([^\"]*)\"$")
+    public void user_enters_in_the_box_with(String arg1, String arg2) {
     	utl.enterText(arg1, arg2);
     }
     

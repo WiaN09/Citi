@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/features/Excel.feature", 
+		features = "src/test/java/features/Data.feature", 
 		glue = "stepDef",
 		monochrome = true,
 		tags = {},

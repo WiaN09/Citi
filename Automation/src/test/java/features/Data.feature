@@ -1,11 +1,11 @@
-Feature: This feature allows the user to shop from the app
+Feature: This feature allows the user to shop from the app using Datatables
 
   Background:
     Given App is open
     
     Scenario Outline:
     	When User selects the value from "dropdown" with "<Country>"
-    	And User enters the "Name" with "<Nameofperson>"
+    	And User enters in the "Name" box with "<Nameofperson>"
     	And User selects a "<Gender>"
     	And User clicks on "ShopButton"
     	And User navigates to the "Products" page
@@ -16,7 +16,7 @@ Feature: This feature allows the user to shop from the app
     	And User clicks on "Checkbox"
     	And User clicks on "Visit_to_the_website"
     	And User is taken to Google Homepage
-    	And User enters the "Search" with "<url>"
+    	And User enters in the "Search" box with "<url>"
     	And User clicks on "<Link>"
     	Examples:
     	| Country    | Nameofperson    | Gender | url                    |Link     |

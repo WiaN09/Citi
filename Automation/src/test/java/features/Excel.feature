@@ -6,7 +6,7 @@ Feature: This feature allows the user to shop from the app with details from exc
     Scenario Outline:
     	When User gets data from excel at "<index>" row
     	And ExcelUser selects the value from "dropdown" with "Country"
-    	And ExcelUser enters the "Name" with "Nameofperson"
+    	And ExcelUser enters in the "Name" box with "Nameofperson"
     	And ExcelUser selects a "Gender"
     	And User clicks on "ShopButton"
     	And User navigates to the "Products" page
@@ -17,9 +17,10 @@ Feature: This feature allows the user to shop from the app with details from exc
     	And User clicks on "Checkbox"
     	And User clicks on "Visit_to_the_website"
     	And User is taken to Google Homepage
-    	And ExcelUser enters the "Search" with "url"
+    	And ExcelUser enters in the "Search" box with "url"
     	And ExcelUser clicks on "Link"
     	Examples:
     	| index |
     	| 1     |
     	| 2     |
+    	

@@ -43,8 +43,8 @@ public class ExcelLogIn extends Utilities{
     	utl.scrollToFind(value);
     }
 
-    @And("^ExcelUser enters the \"([^\"]*)\" with \"([^\"]*)\"$")
-    public void exceluser_enters_the_with(String arg1, String arg2) {
+    @And("^ExcelUser enters in the \"([^\"]*)\" box with \"([^\"]*)\"$")
+    public void exceluser_enters_in_the_box_with(String arg1, String arg2) {
     	String value = datamap.get(index).get(arg2);
     	utl.enterText(arg1, value);
     }

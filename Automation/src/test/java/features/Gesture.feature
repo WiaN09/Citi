@@ -1,4 +1,4 @@
-Feature: This feature allows the user to shop from the app
+Feature: This feature allows the user to navigate through the app demonstrating multiple gestures
 
   Background:
     Given App is open
