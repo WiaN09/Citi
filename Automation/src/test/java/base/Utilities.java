@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -18,6 +20,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 
@@ -108,10 +111,11 @@ public class Utilities {
 	public boolean dragndrop(String from, String to) {
 		Log.debug("Performing drag n drop");
 		try {
-			TouchAction action=new TouchAction(this.driver);
 			WebElement first = driver.findElement(By.xpath(reader.path(from)));
 			WebElement second = driver.findElement(By.xpath(reader.path(to)));
-			action.longPress(ElementOption.element(first)).moveTo(ElementOption.element(second)).release().perform();
+			Actions builder = new Actions(driver);
+			Action dragAndDrop = builder.clickAndHold(first).moveToElement(second).release(first).build();
+			dragAndDrop.perform();
 		}
 		catch(Exception e) {
 			Log.error("Dragging & Dropping", e);
@@ -164,13 +168,74 @@ public class Utilities {
     	return true;
     }
     public void moveSliderToNumber(String object, String num) throws IOException{
-    	int n = Integer.parseInt(num);
-    	String xpath=reader.path(object);
-    	WebElement slider=driver.findElementByXPath(xpath);
-    	Actions move = new Actions(driver);
-    	Action action = move.dragAndDropBy(slider, n, 0).build();
-    	action.perform();    	
+    	Log.debug("Moving slider");
+    	try{
+    		int n = Integer.parseInt(num);
+        	String xpath=reader.path(object);
+        	WebElement slider=driver.findElementByXPath(xpath);
+        	Actions move = new Actions(driver);
+        	Action action = move.dragAndDropBy(slider, n, 0).build();
+        	action.perform();
+    	}
+    	catch(Exception e)
+    	{
+    		Log.error("Moving slider", e);
+    	}
     }
-
+    
+    public void webScroll(){
+    	Log.debug("Web Scroll");
+    	try {
+    		JavascriptExecutor jse = (JavascriptExecutor) driver;
+    		jse.executeScript("window.scrollBy(0,400)");
+    	}
+    	catch(Exception e)
+    	{
+    		Log.error("Web Scroll", e);
+    	}
+    }
+    public void alertBox(){
+    	Log.debug("Alert Box");
+    	try{
+    		click("Alert_Box_Click_Me");
+    		Thread.sleep(1000);
+    		Alert alert= driver.switchTo().alert();
+    		alert.accept();
+    	}
+    	catch(Exception e)
+    	{
+    		Log.error("Alert Box", e);
+    	}
+    }
+    
+    public void confirmBox(){
+    	Log.debug("Confirm Box");
+    	try{
+    		click("Confirm_Box_Click_Me");
+    		Thread.sleep(1000);
+    		Alert alert= driver.switchTo().alert();
+    		alert.dismiss();
+    	}
+    	catch(Exception e)
+    	{
+    		Log.error("Confirm Box", e);
+    	}
+    }
+    
+    public void promptBox(String object){
+    	Log.debug("Prompt Box");
+    	try{
+    		click("Prompt_Box_Click_Me");
+    		Thread.sleep(1000);
+    		Alert alert= driver.switchTo().alert();
+    		alert.sendKeys(object);
+    		alert.accept();
+    	}
+    	catch(Exception e)
+    	{
+    		Log.error("Prompt Box", e);
+    	}
+    }
+    
     }
     
