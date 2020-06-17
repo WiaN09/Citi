@@ -861,3 +861,27 @@ Session ID: bda39254-7a24-4fd1-b422-1ffb51f250db
 2020-06-11 20:01:16 INFO  Log:22 - Test is Ending...
 2020-06-11 20:01:19 INFO  Log:27 - Stop driver
 2020-06-11 20:01:20 INFO  Log:27 - Stop appium service
+2020-06-17 13:35:30 INFO  Log:17 - Test is Starting...
+2020-06-17 13:35:30 INFO  Log:27 - Starting server
+2020-06-17 13:35:35 INFO  Log:27 - Opening the app
+2020-06-17 13:36:08 INFO  Log:27 - Opening the app
+2020-06-17 13:36:09 INFO  Log:27 - App open
+2020-06-17 13:36:22 INFO  Log:27 - User is on Products page
+2020-06-17 13:36:30 INFO  Log:27 - Products added
+2020-06-17 13:36:32 INFO  Log:27 - User is on Cart page
+2020-06-17 13:36:43 INFO  Log:27 - WEBVIEW_com.androidsample.generalstore
+2020-06-17 13:36:49 INFO  Log:22 - Test is Ending...
+2020-06-17 13:36:52 INFO  Log:27 - Stop driver
+2020-06-17 13:36:53 INFO  Log:27 - Stop appium service
+2020-06-17 13:36:53 INFO  Log:17 - Test is Starting...
+2020-06-17 13:36:53 INFO  Log:27 - Starting server
+2020-06-17 13:36:56 INFO  Log:27 - Opening the app
+2020-06-17 13:37:06 INFO  Log:27 - Opening the app
+2020-06-17 13:37:06 INFO  Log:27 - App open
+2020-06-17 13:37:50 INFO  Log:27 - User is on Products page
+2020-06-17 13:37:57 INFO  Log:27 - Products added
+2020-06-17 13:37:59 INFO  Log:27 - User is on Cart page
+2020-06-17 13:38:10 INFO  Log:27 - WEBVIEW_com.androidsample.generalstore
+2020-06-17 13:38:21 INFO  Log:22 - Test is Ending...
+2020-06-17 13:38:24 INFO  Log:27 - Stop driver
+2020-06-17 13:38:25 INFO  Log:27 - Stop appium service
