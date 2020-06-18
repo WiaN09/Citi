@@ -62,7 +62,7 @@ This is the complete project framework required for the Citi internship.
 ### features
 **Data.feature**: Houses detailed scenario for navigation through the app. Data held in *Examples* datatable.  
 **Excel.feature**: Performs the same actions as Data.feature albeit using data from an Excel file.  
-**Gesture.feature**: More focused towards displaying web gestures, eg alerts, slider, drag-drop. Cuts down on steps for app navigation.      
+**Gesture.feature**: More focused towards displaying web gestures, eg alerts, slider, drag-drop. Cuts down on steps for app navigation. 
 ### runner
 **LogRunTest.java**: Responsible for running tests as Cucumber. Holds plugin for generating *reports*.  
 ### stepDef
@@ -70,4 +70,13 @@ This is the complete project framework required for the Citi internship.
 **Hook.java**: Starts the appium server and the emulator. Initialises device capabilities. Closes the appium server and driver. 
 **LogIn.java**: Handles step definitions for Data.feature which converts data to 2D Lists. Mainly intended for LogIn page.    
 **Products.java**: Handles step definitions for Products page.
-**Web.java**: Handles step definitions for Webpages in webview.
+**Web.java**: Handles step definitions for Webpages in webview.  
+#### log4j.properties
+Defines the configuration for the logging used.
+## External files
+**General-Store.apk**: The app tested  
+**RunFeatureData.bat**: Runs and tests the Data.feature in command prompt.  
+**RunFeatureExcel.bat**: Runs and tests the Excel.feature in command prompt.  
+**RunFeatureGesture.bat**: Runs and tests the Gesture.feature in command prompt.    
+**log4j.log**: Everything gets logged in this file.  
+**pom.xml**: Heart of the maven project. Houses all dependancies and external plugins.  
